@@ -1,7 +1,7 @@
 MDMenuViewController
 ------------------------------------------------------------------------------------------
 
-MDMenuViewController is an iOS container view controller that coordinates between its content view controllers through a side menu that is shown from the side with appealing animation , supports iOS 6.0 , 7.0 ,iPhone ,And iPad , Customisable in almost every aspect ,provided with documentation ,And a demo app to get you going right away.
+MDMenuViewController is an iOS container view controller that coordinates between its content view controllers through a side menu that is shown from the side with appealing animation , supports iOS 6.0 , 7.0 , 8.0 ,iPhone ,And iPad , Customisable in almost every aspect ,provided with documentation ,And a demo app to get you going right away.
 should be compiled with ARC.
 -----------------------------------------------------------------------------------------
 
