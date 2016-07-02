@@ -50,6 +50,8 @@ typedef enum
 -(void)pushViewController:(UIViewController*)childController withTransitionAnimator:(id<MDTransitionAnimatorProtocol>)animator;
 -(void)popViewControllerAnimated:(BOOL)animated;
 -(void)popViewControllerWithTransitionAnimator:(id<MDTransitionAnimatorProtocol>)animator;
+-(void)popToRootAnimated:(BOOL)animated;
+-(void)popToRootWithTransitionAnimator:(id<MDTransitionAnimatorProtocol>)animator;
 -(void)showViewController:(UIViewController*)childController withTransitionAnimator:(id<MDTransitionAnimatorProtocol>)animator;
 @end
 @protocol MDMenuViewControllerDelegate <NSObject>

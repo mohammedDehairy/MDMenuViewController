@@ -307,6 +307,21 @@ static int TOP_BAR_HEIGHT = 50;
     
     [self showViewController:preController withTransitionAnimator:animator];
 }
+-(void)popToRootAnimated:(BOOL)animated
+{
+    MDAnimationType animation = animated ? MDAnimationTypeSlideFromLeft : MDAnimationTypeNone;
+    [self popToRootWithTransitionAnimator:[MDTransitionAnimatorFactory transitionAnimatorWithType:animation]];
+}
+-(void)popToRootWithTransitionAnimator:(id<MDTransitionAnimatorProtocol>)animator
+{
+    MDStack *stack = [childViewControllersStacks objectAtIndex:currentControllerIndex];
+    while ([stack count] >= 2) {
+        [stack pop];
+    }
+    UIViewController *preController = [self topChildViewControllerAtIndex:currentControllerIndex];
+    
+    [self showViewController:preController withTransitionAnimator:animator];
+}
 -(void)showViewController:(UIViewController*)childController withAnimationType:(MDAnimationType)animationType
 {
     [self showViewController:childController withTransitionAnimator:[MDTransitionAnimatorFactory transitionAnimatorWithType:animationType]];
